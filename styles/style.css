@@ -1,0 +1,13 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  border: 2px solid hotpink;
+  max-width: 85%;
+}
+
+#main {
+  text-align: center;
+}
