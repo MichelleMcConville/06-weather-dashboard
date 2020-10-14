@@ -29,3 +29,7 @@ body {
 #main {
   text-align: center;
 }
+
+#today {
+  display: block;
+}
