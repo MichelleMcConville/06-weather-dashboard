@@ -3,6 +3,34 @@ body {
   justify-content: center;
 }
 
+h5 {
+  font-size: 15px;
+}
+
+.card-body {
+  margin: 8px;
+  padding: 8px;
+  text-align: left;
+}
+
+.card-date {
+  font-weight: 700;
+}
+
+.card-icon {
+  margin-bottom: 8px;
+}
+
+.card-text {
+  margin-bottom: 8px;
+}
+
+.col {
+  border: 2px solid greenyellow;
+  margin: 0;
+  padding: 0;
+}
+
 .container {
   border: 2px solid hotpink;
   max-width: 85%;
@@ -16,20 +44,24 @@ body {
   padding: 0;
 }
 
-.col {
-  border: 2px solid greenyellow;
-  margin: 0;
-  padding: 0;
-}
-
 #cityInput {
   padding: 1px;
   margin: 1px;
 }
+
+#deck.card-body {
+  margin: 0;
+}
+
+#deck.row {  /*how to fit the entire area*/
+  max-width: 100%;
+}
+
 #main {
   text-align: center;
 }
 
 #today {
   display: block;
+  /* text-align: left; */
 }
