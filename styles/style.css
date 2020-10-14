@@ -22,6 +22,10 @@ body {
   padding: 0;
 }
 
+#cityInput {
+  padding: 1px;
+  margin: 1px;
+}
 #main {
   text-align: center;
 }
