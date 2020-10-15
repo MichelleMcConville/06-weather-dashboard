@@ -65,3 +65,8 @@ h5 {
   display: block;
   /* text-align: left; */
 }
+
+#ul-view {
+  list-style-type: none;
+  text-align: left;
+}

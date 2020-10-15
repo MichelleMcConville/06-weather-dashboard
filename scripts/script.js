@@ -1,33 +1,50 @@
 var date = moment().format("MM/DD/YYYY");
-var cities = "Belton";
+var cities = [];
+var city = "";
 
+loadCity();
 
+//init function
+
+// Saving cities to local storage
+function saveCity() {
+  localStorage.setItem("lscity", JSON.stringify(cities));
+};
+
+// Getting cities from local storage
+function loadCity() {
+  cities = JSON.parse(localStorage.getItem("lscity"));
+};
 
 // F(x) for displaying cities in sideNav
-function citiesList() {
-  $("ul-view").empty();
+function citySearchList() {
+  $("#ul-view").empty();
 
   for (var i = 0; i < cities.length; i++) {
-    var a = $("<ul>");
-    a.addClass("city");
-    a.attr("city-name", cities[i]);
-    a.text(cities[i]);
-    $("ul-view").append(a);
+    var newLi = $("<li>").attr("class","city-list").attr("city-name", cities[i]).text(cities[i]);
+    $("#ul-view").prepend(newLi);
+    console.log(newLi);
   }
 }
 
 // F(x) for search button click event
-$("searchBox").on("click", function(event) {
+$("#searchBtn").on("click", function(event) {
   event.preventDefault();
-  var city = $("#addCity").val().trim();
+  city = $("#addCity").val().trim();
+  $("#addCity").val("");
   cities.push(city);
-  citiesList();
+  saveCity();
+  loadCity();
+  citySearchList();
 });
-$(document).on("click", ".searchBox", citiesList);
-citiesList();
+// $(document).on("click", "#searchBtn", citySearchList);
+citySearchList();
+
+
 
 // TODAY
-var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + cities + "&units=imperial&appid=bf44d6b9da075580825f81e2aa54cf78";
+function weather() {
+var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=bf44d6b9da075580825f81e2aa54cf78";
 console.log(queryURL);
 
 $.ajax({
@@ -51,11 +68,13 @@ $.ajax({
     console.log(response.wind.speed);
     console.log(response.main.temp);
 });
+};
 
 
 
 // 05-Day Forecast
-var queryURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + cities + "&units=imperial&appid=bf44d6b9da075580825f81e2aa54cf78";
+function forecast() {
+var queryURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial&appid=bf44d6b9da075580825f81e2aa54cf78";
 console.log(queryURL);
 
 $.ajax({
@@ -74,3 +93,4 @@ $.ajax({
     console.log(response.list[1].main.humidity);
 
 });
+};
