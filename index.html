@@ -18,19 +18,20 @@
       <h1>Weather Dashboard</h1>
       <div class="row">
 
-        <aside class="col sidenav">
+        <aside class="col sideNav">
           <h6>Search for a City:</h6>
           <div class="input-group mb-3"></div>
           <form>
-            <input id="cityInput" type="text" class="form-control" placeholder="Enter City">
-            <button id="searchBtn" type="submit" class="btn"><i class="fas fa-search"></i></button>
+            <input id="addCity" type="text" class="form-control" placeholder="Enter City">
+            <button id="searchBox" type="submit"><i class="fas fa-search"></i></button>
           </form>
+          <div id="ul-view">uL</div>
         </aside>
 
         <section class="container">
 
           <div id="today" class="row">
-            <h2>City (Date)</h2>
+            <h2 id="name">City (Date) - Icon</h2>
             <p id="temp">Temp</p>
             <p id="humidity">Humidity</p>
             <p id="windSpeed">Wind Speed</p>
@@ -89,8 +90,7 @@
                 </div>
               </div>
 
-              </div>
-
+            </div>
           </div>
 
       </div>
