@@ -18,79 +18,37 @@
       <h1>Weather Dashboard</h1>
       <div class="row">
 
-        <aside class="col sideNav">
+        <aside class="col-sm-2 sideNav">
           <h6>Search for a City:</h6>
           <div class="input-group mb-3"></div>
           <form>
-            <input id="addCity" type="text" class="form-control" placeholder="Enter City">
-            <button id="searchBtn" type="submit"><i class="fas fa-search"></i></button>
+            <div class="row">
+              <div class="col-sm-10">
+                <input id="addCity" type="text" class="form-control" placeholder="Enter City">
+              </div>
+              <div class="col-sm-2">
+                <button id="searchBtn" type="submit"><i class="fas fa-search"></i></button>
+              </div>
+            </div>
+        
+            
           </form>
-          <div id="ul-view">uL</div>
+
+          <div id="ul-view"></div>  <!-- citySearchList f(x) -->
+          <button id="clearBtn" class="btn" type="submit">Clear</button>
+
         </aside>
 
-        <section class="container">
+        <section class="col-sm-10 container">
 
-          <div id="today" class="row"><span><div id="icon"></div></span>
-            <h2 id="name">City (Date)</h2>
-            <p id="temp">Temp</p>
-            <p id="humidity">Humidity</p>
-            <p id="windSpeed">Wind Speed</p>
-            <p id="uvIndex">UV INdex</p>
-          </div>
+          <div id="today" class="row"></div>
           
           <div class="row">
             <h2>5-Day Forecast</h2>
           </div>
 
           <div id="deck" class="row">
-            <div class="card-deck">
-
-              <div class="card bg-primary">
-                <div class="card-body">
-                  <h5 id="d01" class="card-date">MM/DD/YYYY</h5>
-                  <img id="i01" class="card-icon" alt="forecast">
-                  <p id="t01" class="card-text">Temp</p>
-                  <p id="h01" class="card-text">Humidity</p>
-                </div>
-              </div>
-
-              <div class="card bg-primary">
-                <div class="card-body">
-                  <h5 id="d02" class="card-date">MM/DD/YYYY</h5>
-                  <img id="i02" class="card-icon" alt="forecast">Icon
-                  <p id="t02" class="card-text">Temp</p>
-                  <p id="h02" class="card-text">Humidity</p>
-                </div>
-              </div>
-
-              <div class="card bg-primary">
-                <div class="card-body">
-                  <h5 id="d03" class="card-date">MM/DD/YYYY</h5>
-                  <img id="i03" class="card-icon" alt="forecast">Icon
-                  <p id="t03" class="card-text">Temp</p>
-                  <p id="h03" class="card-text">Humidity</p>
-                </div>
-              </div>
-
-              <div class="card bg-primary">
-                <div class="card-body">
-                  <h5 id="d04" class="card-date">MM/DD/YYYY</h5>
-                  <img id="i04" class="card-icon" alt="forecast">Icon
-                  <p id="t04" class="card-text">Temp</p>
-                  <p id="h04" class="card-text">Humidity</p>
-                </div>
-              </div>
-              
-              <div class="card bg-primary">
-                <div class="card-body">
-                  <h5 id="d05" class="card-date">MM/DD/YYYY</h5>
-                  <img id="i05" class="card-icon" alt="forecast">Icon
-                  <p id="t05" class="card-text">Temp</p>
-                  <p id="h05" class="card-text">Humidity</p>
-                </div>
-              </div>
-
-            </div>
+            <div class="card-deck"></div>
           </div>
 
       </div>

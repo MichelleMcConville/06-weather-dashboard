@@ -1,13 +1,30 @@
+:root {
+  background-color: #ecf5ff;
+}
+
 body {
+  background-color: #ecf5ff;
   display: flex;
   justify-content: center;
+}
+
+h1 {
+  background-color: #9672cc;
+  margin: 0;
+  padding: 0;
 }
 
 h5 {
   font-size: 15px;
 }
 
+.card {
+  background-color: rgb(212, 166, 174);
+}
+
 .card-body {
+  /* background-color: rgb(212, 166, 174); */
+  display: inline-block;
   margin: 8px;
   padding: 8px;
   text-align: left;
@@ -69,4 +86,30 @@ h5 {
 #ul-view {
   list-style-type: none;
   text-align: left;
+}
+
+.btn {
+  background: conic-gradient(from 45deg, red, orange, yellow, green, blue, purple);
+  border-color: #333;
+  color: #ecf5ff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  text-decoration: none;
+  text-shadow: -1px 0 #333, 0 2px black, 1px 0 black, 0 -1px black;
+  -webkit-border-radius: 1rem;
+}
+
+.btn:hover {
+  cursor: pointer;
+  box-shadow: 0 0.5rem 0.5rem 0 #333;
+  transform: translateY(0.1rem);
+  transition: transform 150ms;
+}
+
+.btn[disabled]:hover {
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
 }
