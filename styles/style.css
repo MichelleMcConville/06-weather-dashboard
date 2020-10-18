@@ -6,16 +6,44 @@ body {
   background-color: #ecf5ff;
   display: flex;
   justify-content: center;
+  margin: 0;
+  max-width: 100vw;
+  padding: 0;
 }
 
 h1 {
   background-color: #9672cc;
   margin: 0;
   padding: 0;
+  text-align: center  ;
+}
+
+h2 {
+  margin: 0 0 8px 6px;
 }
 
 h5 {
   font-size: 15px;
+}
+
+h6 {
+  font-size: 1.2rem;
+  margin: 0.5rem;
+
+}
+
+input {
+  margin: 0;
+  padding: 0; 
+}
+
+p {
+  margin: 0 0 16px 6px;
+  font-size: 18px;
+}
+
+.btn {
+  width: 100%;
 }
 
 .card {
@@ -23,10 +51,8 @@ h5 {
 }
 
 .card-body {
-  /* background-color: rgb(212, 166, 174); */
   display: inline-block;
-  margin: 8px;
-  padding: 8px;
+  padding: 4px;
   text-align: left;
 }
 
@@ -50,7 +76,7 @@ h5 {
 
 .container {
   border: 2px solid hotpink;
-  max-width: 85%;
+  /* max-width: 100%; */
   margin: 0;
   padding: 0;
 }
@@ -59,6 +85,37 @@ h5 {
   border: 2px solid blue;
   margin: 0;
   padding: 0;
+}
+
+.sideNav {
+  margin: 0;
+  padding: 0;
+}
+
+#addCity{
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#green {
+  background-color: green;
+}
+
+#yellow {
+  background-color: yellow;
+}
+
+#orange {
+  background-color: orange;
+}
+
+#red {
+  background-color: red;
+}
+
+#purple {
+  background-color: purple;
 }
 
 #cityInput {
@@ -70,12 +127,35 @@ h5 {
   margin: 0;
 }
 
-#deck.row {  /*how to fit the entire area*/
+.card-deck {
   max-width: 100%;
 }
 
+
 #main {
-  text-align: center;
+  /* text-align: center; */
+  max-width: 75%;
+}
+
+#searchBtn {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+#searchIcon {
+  font-size: 20px;
+  font-weight: 700;
+  height: 38px;
+  padding: 1px;
+  width: 48px;
+}
+
+#searchBox{
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 #today {
@@ -88,7 +168,27 @@ h5 {
   text-align: left;
 }
 
-.btn {
+#clearBtn {
+  background-color: cornflowerblue;
+  border: 2px solid cornflowerblue;
+  color: whitesmoke;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+}
+
+#clearBtn:active {
+  background-color: rgb(71, 107, 173);
+}
+#clearBtn:hover {
+  border: 2px solid rgb(53, 53, 53);
+}
+
+#clearbtn {
   background: conic-gradient(from 45deg, red, orange, yellow, green, blue, purple);
   border-color: #333;
   color: #ecf5ff;
@@ -101,14 +201,14 @@ h5 {
   -webkit-border-radius: 1rem;
 }
 
-.btn:hover {
+#clearbtn:hover {
   cursor: pointer;
   box-shadow: 0 0.5rem 0.5rem 0 #333;
   transform: translateY(0.1rem);
   transition: transform 150ms;
 }
 
-.btn[disabled]:hover {
+#clearbtn[disabled]:hover {
   cursor: not-allowed;
   box-shadow: none;
   transform: none;
