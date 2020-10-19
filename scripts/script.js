@@ -19,7 +19,7 @@ function citySearchList() {
   $("#cityList").empty();
 
   for (var i = 0; i < cities.length; i++) {
-    var newBtn = $("<button>").attr("class", "btn cityBtn").attr("city-name", cities[i]).text(cities[i]);
+    var newBtn = $("<button>").attr("class", "btn").attr("id", "cityBtn").attr("city-name", cities[i]).text(cities[i]);
     $("#cityList").prepend(newBtn);
   }
 }

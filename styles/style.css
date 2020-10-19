@@ -1,58 +1,78 @@
 :root {
   background-color: #ecf5ff;
+  margin: 0;
+  padding: 0;
 }
+
+/************************/
+/*        Global        */
+/************************/
+
 
 body {
   background-color: #ecf5ff;
   display: flex;
   justify-content: center;
-  margin: 0;
   max-width: 100vw;
-  padding: 0;
+}
+
+form {
+  padding-top: .25rem;
 }
 
 h1 {
   background-color: #9672cc;
-  margin: 0;
-  padding: 0;
-  text-align: center  ;
+  color: #ecf5ff;
+  margin-bottom: 0;
+  padding: .5rem 0;
+  text-align: center;
+  text-shadow: -.0625rem 0 #2b213b, 0 .125rem #333, .0625rem 0 #333, 0 -.0625rem #333;
+  -webkit-border-radius: 0.3rem;
 }
 
 h2 {
-  margin: 0 0 8px 6px;
+  margin: 0 0 0 .5rem;
 }
 
 h5 {
-  font-size: 15px;
+  font-size: 1.1rem;
 }
 
-h6 {
-  font-size: 1.2rem;
-  margin: 0.5rem;
-
-}
-
-input {
-  margin: 0;
-  padding: 0; 
+hr {
+  padding-bottom: 0;
+  margin-top: .75rem;
+  margin-bottom: 0;
 }
 
 p {
-  margin: 0 0 16px 6px;
-  font-size: 18px;
+  margin: 0 0 1rem 1rem;
+  font-size: 1.125rem;
+  font-weight: 600;
 }
 
+span {
+  padding: 0.25rem;
+  color: white;
+  -webkit-border-radius: 0.25rem;
+}
+
+/************************/
+/*        Classes       */
+/************************/
+
 .btn {
+  background-color: rgb(134, 196, 158);
   width: 100%;
 }
 
 .card {
   background-color: rgb(212, 166, 174);
+  -webkit-border-radius: 0.5rem;
 }
 
 .card-body {
   display: inline-block;
-  padding: 4px;
+  padding: .25rem;
   text-align: left;
 }
 
@@ -60,43 +80,41 @@ p {
   font-weight: 700;
 }
 
+.card-deck {
+  width: 100%;
+}
+
 .card-icon {
-  margin-bottom: 8px;
+  margin-bottom: .5rem;
 }
 
 .card-text {
-  margin-bottom: 8px;
+  margin-bottom: .5rem;
 }
 
 .col {
-  border: 2px solid greenyellow;
   margin: 0;
   padding: 0;
-}
+} 
 
 .container {
-  border: 2px solid hotpink;
-  /* max-width: 100%; */
-  margin: 0;
   padding: 0;
 }
 
 .row {
-  border: 2px solid blue;
   margin: 0;
-  padding: 0;
 }
 
 .sideNav {
-  margin: 0;
-  padding: 0;
+  background-color: #d3d3d3;
+  margin-top: .75rem;
+  padding: .5rem;
+  -webkit-border-radius: 0.3rem;
 }
 
-#addCity{
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
-}
+/************************/
+/*        Colors        */
+/************************/
 
 #green {
   background-color: green;
@@ -104,6 +122,7 @@ p {
 
 #yellow {
   background-color: yellow;
+  color: #333
 }
 
 #orange {
@@ -118,49 +137,42 @@ p {
   background-color: purple;
 }
 
-#cityInput {
-  padding: 1px;
-  margin: 1px;
+/************************/
+/*       Classes        */
+/************************/
+
+#addCity{
+  background-color: #ecf5ff;
+  justify-content: center;
+  width: 100%;
 }
 
-#deck.card-body {
-  margin: 0;
+#cityBtn {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: .0625rem 0;
+  padding: .0625rem;
 }
-
-.card-deck {
-  max-width: 100%;
-}
-
 
 #main {
-  /* text-align: center; */
-  max-width: 75%;
+ width: 75%;
 }
 
 #searchBtn {
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
+  justify-content: center;
+  margin: .125rem 0;
+  padding: .1875rem;
+  width: 100%;
 }
 
-
-#searchIcon {
-  font-size: 20px;
-  font-weight: 700;
-  height: 38px;
-  padding: 1px;
-  width: 48px;
-}
-
-#searchBox{
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
+#todayIcon {
+  height: 5.5rem;
+  width: 5.5rem;
 }
 
 #today {
   display: block;
-  /* text-align: left; */
+  margin-top: .25rem;
 }
 
 #ul-view {
@@ -168,47 +180,61 @@ p {
   text-align: left;
 }
 
-#clearBtn {
-  background-color: cornflowerblue;
-  border: 2px solid cornflowerblue;
-  color: whitesmoke;
-  margin-top: 1px;
-  margin-bottom: 1px;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  padding-left: 10px;
-  padding-right: 10px;
+/************************/
+/*       Buttons        */
+/************************/
+
+#searchBtn {
+  background: linear-gradient(to left,#2b213b, #9672cc, #d3d3d3, #ecf5ff, rgb(212, 166, 174), rgb(134, 196, 158));
+  border: .125rem solid #2b213b;
+  color: #ecf5ff;
+  display: flex;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: .125rem 0;
+  padding: .1875rem;
+  text-shadow: -.0625rem 0 #2b213b, 0 .125rem #333, .0625rem 0 #333, 0 -.0625rem #333;
   width: 100%;
 }
 
-#clearBtn:active {
-  background-color: rgb(71, 107, 173);
-}
-#clearBtn:hover {
-  border: 2px solid rgb(53, 53, 53);
-}
-
-#clearbtn {
-  background: conic-gradient(from 45deg, red, orange, yellow, green, blue, purple);
-  border-color: #333;
-  color: #ecf5ff;
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin: 0.5rem;
-  padding: 0.5rem;
-  text-decoration: none;
-  text-shadow: -1px 0 #333, 0 2px black, 1px 0 black, 0 -1px black;
-  -webkit-border-radius: 1rem;
-}
-
-#clearbtn:hover {
+#searchBtn:hover {
   cursor: pointer;
-  box-shadow: 0 0.5rem 0.5rem 0 #333;
+  color: hotpink;
+  box-shadow: 0 0.5rem 0.5rem 0 #2b213b;
   transform: translateY(0.1rem);
   transition: transform 150ms;
 }
 
-#clearbtn[disabled]:hover {
+#searchBtn[disabled]:hover {
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+#clearBtn {
+  background: linear-gradient(to left,#2b213b, #9672cc, #d3d3d3, #ecf5ff, rgb(212, 166, 174), rgb(134, 196, 158));
+  border: .125rem solid #2b213b;
+  color: hotpink;
+  display: flex;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: .125rem 0;
+  padding: .1875rem;
+  text-shadow: -.0625rem 0 #2b213b, 0 .125rem #333, .0625rem 0 #333, 0 -.0625rem #333;
+  width: 100%;
+}
+
+#clearBtn:hover {
+  cursor: pointer;
+  color: #ecf5ff;
+  box-shadow: 0 0.5rem 0.5rem 0 #2b213b;
+  transform: translateY(0.1rem);
+  transition: transform 150ms;
+}
+
+#clearBtn[disabled]:hover {
   cursor: not-allowed;
   box-shadow: none;
   transform: none;
