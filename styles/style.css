@@ -62,6 +62,7 @@ span {
 
 .btn {
   background-color: rgb(134, 196, 158);
+  margin-bottom: .1875rem;
   width: 100%;
 }
 
@@ -143,7 +144,8 @@ span {
 
 #addCity{
   background-color: #ecf5ff;
-  justify-content: center;
+  margin-bottom: .2rem;
+  text-align: center;
   width: 100%;
 }
 
@@ -187,54 +189,28 @@ span {
 #searchBtn {
   background: linear-gradient(to left,#2b213b, #9672cc, #d3d3d3, #ecf5ff, rgb(212, 166, 174), rgb(134, 196, 158));
   border: .125rem solid #2b213b;
-  color: #ecf5ff;
+  color: hotpink;
   display: flex;
   justify-content: center;
   font-size: 1.25rem;
   font-weight: 700;
   margin: .125rem 0;
   padding: .1875rem;
-  text-shadow: -.0625rem 0 #2b213b, 0 .125rem #333, .0625rem 0 #333, 0 -.0625rem #333;
+  text-shadow: 0 0 .5rem #333;
   width: 100%;
+  -webkit-text-stroke-color: indigo;
+  -webkit-text-stroke-width: .0625rem;
 }
 
 #searchBtn:hover {
   cursor: pointer;
-  color: hotpink;
+  color: #ecf5ff;
   box-shadow: 0 0.5rem 0.5rem 0 #2b213b;
   transform: translateY(0.1rem);
   transition: transform 150ms;
 }
 
 #searchBtn[disabled]:hover {
-  cursor: not-allowed;
-  box-shadow: none;
-  transform: none;
-}
-
-#clearBtn {
-  background: linear-gradient(to left,#2b213b, #9672cc, #d3d3d3, #ecf5ff, rgb(212, 166, 174), rgb(134, 196, 158));
-  border: .125rem solid #2b213b;
-  color: hotpink;
-  display: flex;
-  justify-content: center;
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin: .125rem 0;
-  padding: .1875rem;
-  text-shadow: -.0625rem 0 #2b213b, 0 .125rem #333, .0625rem 0 #333, 0 -.0625rem #333;
-  width: 100%;
-}
-
-#clearBtn:hover {
-  cursor: pointer;
-  color: #ecf5ff;
-  box-shadow: 0 0.5rem 0.5rem 0 #2b213b;
-  transform: translateY(0.1rem);
-  transition: transform 150ms;
-}
-
-#clearBtn[disabled]:hover {
   cursor: not-allowed;
   box-shadow: none;
   transform: none;
