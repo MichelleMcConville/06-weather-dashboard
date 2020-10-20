@@ -17,11 +17,18 @@ function loadCity() {
 //Dynamically building City List under search box
 function citySearchList() {
   $("#cityList").empty();
-
-  for (var i = 0; i < cities.length; i++) {
-    var newBtn = $("<button>").attr("class", "btn").attr("id", "cityBtn").attr("city-name", cities[i]).text(cities[i]);
-    $("#cityList").prepend(newBtn);
+  
+   var count = 0;
+  for (var i = cities.length-1; i >= 0; i--) {
+    if (count++ < 9) {
+      var newBtn = $("<button>").attr("class", "listBtn btn").attr("city-name", cities[i]).text(cities[i]);
+    $("#cityList").append(newBtn);
+    }
   }
+  $(".listBtn").on("click", function (event) {
+    var city = $(this).text();
+    weatherData(city);
+  })
 }
 
 // Saving cities to local storage
@@ -75,7 +82,7 @@ function weatherToday(city) {
   });
 }
 
-// 
+// Setting the UV Index color
 function getUvIndex(lat, lon) {
   queryURL = "http://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + lon + "&appid=bf44d6b9da075580825f81e2aa54cf78";
   $.ajax({
@@ -149,8 +156,8 @@ $(".cityBtn").on("click", function(event) {
   forecastDeck(city);
 })
 
-//
-$("#clearBtn").on("click", function(event){
-  localStorage.clear();
-  location.reload();  
-});
+// F(x) for clearing city list
+// $("#clearBtn").on("click", function(event){
+//   localStorage.clear();
+//   location.reload();  
+// });
