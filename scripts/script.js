@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-var date = moment().format("MM/DD/YYYY");
 var cities;
 var city = "";
 
