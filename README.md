@@ -1,64 +1,60 @@
-# 06-weather-dashboard <span style="color:yellow">**<== Link Goes Here**</span> :link:
+# [06-weather-dashboard](https://michellemcconville.github.io/06-weather-dashboard/) :link:
 
 ## Customer Request
 
-For this project the customer request we:
+For this project the customer requests a `5-Day Weather App`
 
 ---
 
-## ***Site***
+## User Story
 
-- This planner used customer provided code as starter
-- This quiz was newly created no customer boilerplate provided
+```.
+AS A traveler
+I WANT to see the weather outlook for multiple cities
+SO THAT I can plan a trip accordingly
+```
 
-### ***HTML*** `|` [**TBD**](https://tbd/) <span style="color:yellow">**<== Link Goes Here**</span> :link:
+## Acceptance Criteria
 
-#### 1. Newly created  ***`index.html`*** file with the following
-
-- All the `<meta>`, stylesheet `<links>` & `<script>` files and/or libraries necessary
-
-- x
-- x
-
-### ***CSS***
-
-#### 2. Newly created ***`style.css`*** file with the following
-
-- x
-- x
-
-
-### ***JS***
-
-#### 3. Newly created ***`script.js`*** file with the following
-
-- x
-- x
+```.
+GIVEN a weather dashboard with form inputs
+WHEN I search for a city
+THEN I am presented with current and future conditions for that city and that city is added to the search history
+WHEN I view current weather conditions for that city
+THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
+WHEN I view the UV index
+THEN I am presented with a color that indicates whether the conditions are favorable, moderate, or severe
+WHEN I view future weather conditions for that city
+THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, and the humidity
+WHEN I click on a city in the search history
+THEN I am again presented with current and future conditions for that city
+WHEN I open the weather dashboard
+THEN I am presented with the last searched city forecast
+```
 
 ---
 
 ## Sources Referenced
 
-<span style="color:yellow">**Add more if needed**</span>
-
+[google](https://www.google.com/) `|`
+[momentJs](https://momentjs.com/) `|`
 [w3schools](https://www.w3schools.com) `|`
 [MDN web docs](https://developer.mozilla.org/en-US/) `|`
-[Markdown Guide](https://www.markdownguide.org/) `|`
-[google](https://www.google.com/)
+[Bootstrap](https://getbootstrap.com/) `|`
+[Font Awesome](https://fontawesome.com/) `|`
+[Markdown Guide](https://www.markdownguide.org/)
 
 ---
 
-## Accessibility Standards Validation <span style="color:red">**<== Coming Soon**</span>
+## Accessibility Standards Validation
 
 | Successfully ran code thru [**W3C**](https://validator.w3.org/) validator |
 |---------------------------------------------------------------------------|
-| ![Validation Results](./images/tbd)                                       |
-
-<span style="color:yellow">**Make sure the image works it can be finicky!**</span>
+| ![Validation Results](./images/06-w3c-Success.png)                        |
 
 ---
 
-## Output for Review <span style="color:red">**<== Updated Later**</span>
+## Output for Review
 
 Submitted the following for review:
 
@@ -67,14 +63,6 @@ Submitted the following for review:
 
 ---
 
-## Application Screenshots <span style="color:red">**<== Coming Soon**</span>
+## Application Screenshot
 
-| ***Title***          | ***Title***          |
-| -------------------- | -------------------- |
-| ![TBD](./tbd)        | ![TBD](./tbd)        |
-| ***Title***          | ***Title***          |
-| ![TBD](./tbd)        | ![TBD](./tbd)        |
-
-<span style="color:yellow">**Make sure to resize images to same width & height**</span>
-
-<span style="color:yellow">**If you do not want ***Title*** replace sections w/ text**</span>
+![Weather App](./images/weatherApp.png)
