@@ -1,3 +1,5 @@
+$(document).ready(function() {
+
 var date = moment().format("MM/DD/YYYY");
 var cities;
 var city = "";
@@ -17,8 +19,7 @@ function loadCity() {
 //Dynamically building City List under search box
 function citySearchList() {
   $("#cityList").empty();
-  
-   var count = 0;
+  var count = 0;
   for (var i = cities.length-1; i >= 0; i--) {
     if (count++ < 9) {
       var newBtn = $("<button>").attr("class", "listBtn btn").attr("city-name", cities[i]).text(cities[i]);
@@ -51,7 +52,7 @@ function weatherData(city) {
 // Today's weather block
 function weatherToday(city) {
   $("#today").empty();
-  var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=bf44d6b9da075580825f81e2aa54cf78";
+  var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=bf44d6b9da075580825f81e2aa54cf78";
   
   $.ajax({
     url: queryURL,
@@ -60,7 +61,7 @@ function weatherToday(city) {
     var name = response.name;
     var date = moment.unix(response.dt).format("MM/DD/YYYY");
     var icon = response.weather[0].icon;
-    var iconURL = "http://openweathermap.org/img/w/" + icon + ".png";
+    var iconURL = "https://openweathermap.org/img/w/" + icon + ".png";
     var temp = response.main.temp;
     var humidity = response.main.humidity;
     var windSpeed = response.wind.speed;
@@ -84,7 +85,7 @@ function weatherToday(city) {
 
 // Setting the UV Index color
 function getUvIndex(lat, lon) {
-  queryURL = "http://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + lon + "&appid=bf44d6b9da075580825f81e2aa54cf78";
+  queryURL = "https://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + lon + "&appid=bf44d6b9da075580825f81e2aa54cf78";
   $.ajax({
     url: queryURL,
     method: "GET",
@@ -109,7 +110,7 @@ function getUvIndex(lat, lon) {
 // Dynamically building the 5-Day forecast section
 function forecastDeck(city) {
   $(".card-deck").empty();
-  var queryURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial&appid=bf44d6b9da075580825f81e2aa54cf78";
+  var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial&appid=bf44d6b9da075580825f81e2aa54cf78";
 
   $.ajax({
     url: queryURL,
@@ -119,7 +120,7 @@ function forecastDeck(city) {
       if (response.list[i].dt_txt[12] === "2") {
       var cardDate = moment.unix(response.list[i].dt).format("MM/DD/YYYY");
       var cardIcon = response.list[i].weather[0].icon;
-      var cardIconURL = "http://openweathermap.org/img/w/" + cardIcon + ".png";
+      var cardIconURL = "https://openweathermap.org/img/w/" + cardIcon + ".png";
       var cardTemp = response.list[i].main.temp;
       var cardHum =  response.list[i].main.humidity;
 
@@ -128,8 +129,8 @@ function forecastDeck(city) {
         <div class="card-body">
           <h5 class="card-date">${cardDate}</h5>
           <img class="card-icon" alt="forecast" src="${cardIconURL}">
-          <p class="card-text">Temp: ${cardTemp} \u00B0F</p>
-        <p class="card-text">Humidity: ${cardHum}%</p>
+          <p class="card-text">Temp:<br> ${cardTemp} \u00B0F</p>
+        <p class="card-text">Humidity:<br> ${cardHum}%</p>
         </div>
       </div>`);
       }
@@ -137,7 +138,7 @@ function forecastDeck(city) {
   });
 }
 
-// F(x) for search button click event
+// On click for search box
 $("#searchBtn").on("click", function (event) {
   event.preventDefault();
   city = $("#addCity").val().trim();
@@ -147,6 +148,7 @@ $("#searchBtn").on("click", function (event) {
   weatherData(city);
 });
 
+// On click for city buttons
 $(".cityBtn").on("click", function(event) {
   event.preventDefault();
   city = $(this).text().trim();
@@ -155,8 +157,4 @@ $(".cityBtn").on("click", function(event) {
   forecastDeck(city);
 })
 
-// F(x) for clearing city list
-// $("#clearBtn").on("click", function(event){
-//   localStorage.clear();
-//   location.reload();  
-// });
+});
