@@ -1,4 +1,4 @@
-# [06-weather-dashboard](https://michellemcconville.github.io/06-weather-dashboard/) :link:
+# [06-weather-dashboard](https://michellemcconville.github.io/06-weather-dashboard/) 🔗
 
 ## Customer Request
 
@@ -36,12 +36,12 @@ THEN I am presented with the last searched city forecast
 
 ## Sources Referenced
 
-[google](https://www.google.com/) `|`
-[momentJs](https://momentjs.com/) `|`
-[w3schools](https://www.w3schools.com) `|`
-[MDN web docs](https://developer.mozilla.org/en-US/) `|`
-[Bootstrap](https://getbootstrap.com/) `|`
-[Font Awesome](https://fontawesome.com/) `|`
+[google](https://www.google.com/) **`|`**
+[momentJs](https://momentjs.com/) **`|`**
+[w3schools](https://www.w3schools.com) **`|`**
+[MDN web docs](https://developer.mozilla.org/en-US/) **`|`**
+[Bootstrap](https://getbootstrap.com/) **`|`**
+[Font Awesome](https://fontawesome.com/) **`|`**
 [Markdown Guide](https://www.markdownguide.org/)
 
 ---
